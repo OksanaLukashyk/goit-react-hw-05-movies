@@ -6,19 +6,20 @@ import MoviesList from 'components/MoviesList/MoviesList';
 
 const Home = () => {
     const [moviesList, setMovies] = useState([]);
-    const [isLoading, setIsloading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     
     useEffect(() => {
 
     const getMoviesList = async () => {
       try {
-        setIsloading(true);
-          const data = await getTrending();
+        setIsLoading(true);
+        setError(null);
+
+        const data = await getTrending();
           
         if (data.total_results === 0) {
-            setIsloading(false);
-            setError(null);
+          setIsLoading(false);
           setError(Notify.failure('Sorry, no results found', { timeout: 3000, }));
         }
 
@@ -27,10 +28,9 @@ const Home = () => {
         setError(error.message);
       }
       finally {
-        setIsloading(false);
+        setIsLoading(false);
       }
     }
-
         getMoviesList();
     }, []);
 

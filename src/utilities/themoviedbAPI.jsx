@@ -13,6 +13,11 @@ export const getMovies = async (query, page) => {
     return data;
 };
 
+// export const getMovies = async (query) => {
+//     const { data } = await axios.get(`${BASE_URL}search/movie?query=${query}&api_key=${API_KEY}`);
+//     return data;
+// };
+
 export const getMovieDetails = async (id) => {
     const { data } = await axios.get(`${BASE_URL}movie/${id}?api_key=${API_KEY}`);
     return data;

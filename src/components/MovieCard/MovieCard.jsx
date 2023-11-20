@@ -1,14 +1,13 @@
-import React from 'react';
-import { Suspense, lazy } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import { Loader } from 'components/Loader/Loader';
 import css from './MovieCard.module.css';
 
-const Cast = lazy(() => import('../Cast/Cast'));
-const Reviews = lazy(() => import('../Reviews/Reviews'));
+// const Cast = lazy(() => import('../Cast/Cast'));
+// const Reviews = lazy(() => import('../Reviews/Reviews'));
 
-
-const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie }) => {
+// const MovieCard = ({ movie }) => {
     // const defaultImg = '<https://media.comicbook.com/files/img/default-movie.png?auto=webp>'
     const defaultImg = '<https://www.seekpng.com/png/detail/311-3111678_clapperboard-png-transparent-images-film-poster.png>'
 
@@ -29,7 +28,7 @@ const MovieCard = ({ movie }) => {
                     <ul>{movie.genres && movie.genres.map(genre => <li key={genre.id}>{genre.name}</li>)}</ul>
                 </div>
             </div>
-            <div className={css.moreInfoWrp}>
+            {/* <div className={css.moreInfoWrp}>
                 <h3 className={css.moreInfo}>Additional information</h3>
                 <ul className={css.moreInfoList}>
                     <li className={css.moreInfoItem}>
@@ -45,9 +44,9 @@ const MovieCard = ({ movie }) => {
                     <Route path="cast" element={<Cast />} />
                     <Route path="reviews" element={<Reviews/>} />
                 </Routes>
-            </Suspense>
+            </Suspense> */}
         </div>
     )
 }
 
-export default MovieCard;
+// export default MovieCard;
