@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import SharedLayout from "./SharedLayout/SharedLayout";
@@ -8,7 +9,7 @@ const Movies = lazy(() => import('pages/Movies/Movies'));
 const Home = lazy(() => import('pages/Home/Home'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 
-export const App = () => {
+const App = () => {
   return (
     <div className="container">
       <SharedLayout />
@@ -35,5 +36,4 @@ export const App = () => {
   );
 };
 
-
-// Якщо користувач зайшов за неіснуючим маршрутом, його необхідно перенаправляти на домашню сторінку.
+export  default App;
