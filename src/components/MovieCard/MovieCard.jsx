@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 import css from './MovieCard.module.css';
 
@@ -10,6 +10,7 @@ const MovieCard = ({ movie }) => {
   const defaultImg =
     // 'https://psculturalcenter.org/template_1/img/default-movie-portrait.jpg';
     'https://media.comicbook.com/files/img/default-movie.png?auto=webp';
+
   let releaseDate = movie.release_date;
   let releaseYear = releaseDate.substring(0, 4);
   let time = movie.runtime;
@@ -29,7 +30,6 @@ const MovieCard = ({ movie }) => {
             }
             alt={movie.title}
             className={css.posterImg}
-            // width="240"
           />
           <img
             src={
@@ -39,7 +39,6 @@ const MovieCard = ({ movie }) => {
             }
             alt={movie.title}
             className={css.posterImgShadow}
-            // width="240"
           />
         </div>
         <div className={css.textInfoWrp}>
