@@ -1,0 +1,17 @@
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
+}
+
+.reviewsItemWrp {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
+  border: 1px solid #bfa181;
+}

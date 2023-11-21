@@ -1,0 +1,86 @@
+.mainInfoWrp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
+.posterWrp {
+  position: relative;
+  width: 300px;
+}
+
+.posterImg {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.posterImgShadow {
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  z-index: 1;
+  bottom: -15px;
+  left: 0;
+  filter: blur(15px);
+  transform: scale(1.07);
+}
+
+.textInfoWrp {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  gap: 15px;
+}
+
+.charName {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.genresList {
+  display: flex;
+  gap: 15px;
+}
+
+.genreItem,
+.moreInfoLink {
+  padding: 10px;
+  min-width: 60px;
+  border-color: transparent;
+  outline: none;
+  border-radius: 15px;
+  color: #1d1d1d;
+  text-align: center;
+  background: goldenrod;
+}
+
+.moreInfoLink {
+  box-shadow: rgba(0, 0, 0, 0.54) 5px 5px 5px 5px inset;
+}
+
+.moreInfoLink.active {
+  border: goldenrod;
+  background: #1d1d1d;
+  color: goldenrod;
+}
+
+.moreInfoWrp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.moreInfoList {
+  display: flex;
+  gap: 15px;
+}

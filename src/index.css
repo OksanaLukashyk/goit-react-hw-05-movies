@@ -7,9 +7,84 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1d1d1d;
+  color: #bfa181;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  width: 100%;
+}
+
+.active {
+  font-weight: bold;
+  color: goldenrod;
+  /* text-shadow: #bfa181 5px 10px 5px 0px; */
+  text-shadow: #bfa181 1px 0 15px;
+}
+
+.homePageLink {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.glass {
+  padding: 15px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0;
+  background: inherit;
+  backdrop-filter: blur(50px);
+}
+
+.innerPageContainer {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
 }

@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.input {
+  min-width: 300px;
+  padding: 8px;
+  outline: none;
+  border-color: goldenrod;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: goldenrod;
+}
+
+.button {
+  padding: 10px;
+  width: 50px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: goldenrod;
+  box-shadow: rgba(0, 0, 0, 0.54) 5px 5px 5px 5px inset;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2px #bfa181, 0 0 5px #ffab00, 0 0 10px goldenrod,
+    0 0 20px #1d1d1d;
+  animation: pulsate-light 2s infinite alternate;
+}
+
+@keyframes pulsate-light {
+  100% {
+    box-shadow: 0 0 2px #fff, 0 0 8px #bfa181, 0 0 10px #ffab00,
+      0 0 15px goldenrod;
+  }
+  0% {
+    box-shadow: 0 0 2px #fff, 0 0 7px #bfa181, 0 0 10px #ffab00,
+      0 0 20px goldenrod;
+  }
+}

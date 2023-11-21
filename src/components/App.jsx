@@ -1,24 +1,17 @@
-import React from 'react';
-import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import SharedLayout from "./SharedLayout/SharedLayout";
-import { Loader } from "./Loader/Loader";
-import NotFound from "pages/NotFound/NotFound";
+import React, { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Loader } from './Loader/Loader';
+import SharedLayout from './SharedLayout/SharedLayout';
+import NotFound from 'pages/NotFound/NotFound';
 
 const Movies = lazy(() => import('pages/Movies/Movies'));
 const Home = lazy(() => import('pages/Home/Home'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 
-const App = () => {
+export const App = () => {
   return (
-      <SharedLayout>
-
-      <Suspense
-        fallback={
-          // <div>Loading...</div>
-            <Loader />
-          }
-      >
+    <SharedLayout>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
@@ -28,11 +21,9 @@ const App = () => {
           <Route path="/movies/:movieId/cast" element={<Cast />} />
           <Route path="/movies/:movieId/reviews" element={<Reviews />} />
         </Route>*/}
-          <Route path='*' element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        </Suspense>
-        </SharedLayout>
-    );
+      </Suspense>
+    </SharedLayout>
+  );
 };
-
-export  default App;

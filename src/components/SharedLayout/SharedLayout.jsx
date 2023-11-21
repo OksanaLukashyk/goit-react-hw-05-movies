@@ -1,18 +1,23 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
-// import css from './Layout.module.css'
+import { NavLink } from 'react-router-dom';
+import css from './SharedLayout.module.css';
 
-const SharedLayout = ({children}) => {
+const SharedLayout = ({ children }) => {
   return (
-      <div>
-          <header>
-        <nav>
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/movies">Movies</NavLink>
+    <div className={css.container}>
+      <header className={css.pageHeader}>
+        <nav className={css.nav}>
+          <NavLink className={css.navLink} to="/" end>
+            Home
+          </NavLink>
+          <NavLink className={css.navLink} to="/movies">
+            Movies
+          </NavLink>
         </nav>
       </header>
       <main>{children}</main>
-      </div> );
+    </div>
+  );
 };
 
 export default SharedLayout;

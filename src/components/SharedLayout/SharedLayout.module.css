@@ -1,0 +1,27 @@
+.container {
+  max-width: 1280px;
+  min-height: 100vh;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 20px 0;
+}
+
+.pageHeader {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid goldenrod;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  font-size: 18px;
+}

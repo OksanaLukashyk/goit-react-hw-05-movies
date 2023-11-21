@@ -1,0 +1,30 @@
+.backLinkRef {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 60px;
+  border-color: transparent;
+  outline: none;
+  border-radius: 15px;
+  color: #1d1d1d;
+  background: goldenrod;
+  box-shadow: rgba(0, 0, 0, 0.54) 5px 5px 5px 5px inset;
+  transition: transform 0.3s ease-in-out;
+}
+
+.backLinkRef:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2px #bfa181, 0 0 5px #ffab00, 0 0 10px goldenrod,
+    0 0 20px #1d1d1d;
+  animation: pulsate-light 2s infinite alternate;
+}
+
+@keyframes pulsate-light {
+  100% {
+    box-shadow: 0 0 2px #fff, 0 0 8px #bfa181, 0 0 10px #ffab00,
+      0 0 15px goldenrod;
+  }
+  0% {
+    box-shadow: 0 0 2px #fff, 0 0 7px #bfa181, 0 0 10px #ffab00,
+      0 0 20px goldenrod;
+  }
+}

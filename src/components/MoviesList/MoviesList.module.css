@@ -1,0 +1,40 @@
+.moviesList {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.moviesListItem {
+  max-width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px 2px;
+  border-radius: 10px;
+  transition: all 1s ease-in-out;
+}
+
+.moviesListItem:hover {
+  transform: scale(1.05);
+  color: goldenrod;
+}
+
+.moviesListItemLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.moviesListItemTitle {
+  max-width: 220px;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+.galleryItemPoster {
+  width: 240px;
+}

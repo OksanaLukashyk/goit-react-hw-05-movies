@@ -1,0 +1,20 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.castItemWrp {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  gap: 10px;
+}
+
+.castInfoWrp {
+  text-align: center;
+}
